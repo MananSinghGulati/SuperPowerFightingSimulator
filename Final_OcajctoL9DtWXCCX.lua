@@ -58,7 +58,9 @@ local w = library:CreateWindow("Manny's Power Simulator Farm")
 local b = w:CreateFolder("Autofarm") 
 b:DestroyGui()
 
-local d = w:CreateFolder("Teleport") 
+local d = w:CreateFolder("Training") 
+
+local e = w:CreateFolder("Chests")
 
 --autotran toggle
 
@@ -102,14 +104,48 @@ d:Button("Crate",function()
     teleportTO(game:GetService("Workspace")["Important Buildings (Training Areas)"]["Crate Training Area"].Model.Part)
 end)
 
-d:Button("Gym",function()
-    teleportTO(game:GetService("Workspace")["Important Buildings (Training Areas)"].Gym.Part)
-end)
-
 d:Button("Warehouse",function()
     teleportTO(game:GetService("Workspace")["Important Buildings (Training Areas)"]["Dock Warehouse"].Part)
 end)
 
+d:Button("Sewer",function()
+    teleportTO(game:GetService("Workspace")["Important Buildings (Training Areas)"].Sewer.Model.Part)
+end)
 
+d:Button("Factory",function()
+teleportTO(game:GetService("Workspace")["Important Buildings (Training Areas)"].Factory.Part)
+end)
 
+d:Button("Toxic Factory",function()
+    teleportTO(game:GetService("Workspace")["Important Buildings (Training Areas)"]["Toxic Factory"].Part)
+end)
 
+d:Button("Car", function()
+    teleportTO(game:GetService("Workspace")["Important Buildings (Training Areas)"].Car.Wheels.FL.Parts.Part)
+end)
+
+d:Button("Gym",function()
+    teleportTO(game:GetService("Workspace")["Important Buildings (Training Areas)"].Gym.Part)
+end)
+
+d:Button("Library", function()
+    teleportTO(game:GetService("Workspace")["Important Buildings (Training Areas)"].Library.Part)
+end)
+
+d:Button("Ambulance", function()
+    teleportTO(game:GetService("Workspace")["Important Buildings (Training Areas)"].Ambulance.Part)
+end)
+
+-- Chests Teleport
+
+e:Button("MirageChest", function()
+    teleportTO(game:GetService("Workspace").Chests.MirageChest.Part)
+end)
+
+e:Button("NinjaChest", function()
+    teleportTO(game:GetService("Workspace").Chests.NinjaChest.Model.MeshPart)
+end)
+
+e:Button("SkyChest",function()
+    teleportTO(game:GetService("Workspace").Chests.SkyChest.TouchPart)
+end)
